@@ -1,0 +1,685 @@
+@import font
+@import colors
+
+// General
+*
+	box-sizing: border-box
+
+html
+	overflow-x: hidden
+
+html, body
+	margin: 0
+	padding: 0
+	scrolling: smooth
+	position: relative
+	font-family: 'Zilla Slab Regular', 'Helvetica', Arial
+	font-weight: lighter
+	font-size: 1.15rem
+	line-height: 1.5
+	color: $main
+
+body
+	width: 100vw
+
+a
+	color: $main
+	text-decoration: none
+	font-family: 'Righteous', 'Helvetica', Arial, sans-serif
+	text-transform: uppercase
+	position: relative
+	font-size: 1.5rem
+	transition: all .3s ease-in-out
+
+h1, h2, h3
+	font-family: 'Righteous', 'Helvetica', Arial, sans-serif
+	line-height: 1.3
+
+h1
+	position: relative
+	margin: 0
+	font-size: 12vw
+	color: rgba(255,255,255,1)
+	-webkit-text-fill-color: transparent
+	text-fill-color: transparent
+	-webkit-text-stroke: .01rem $main
+	text-stroke: .01rem $main
+
+h2
+	text-transform: uppercase
+	text-decoration: underline	
+	margin-bottom: .5rem
+
+h3
+	font-size: 1.5rem
+	text-transform: uppercase
+
+.mt-2
+	margin-top: 2rem
+
+button
+	outline: 0
+	border: 0
+	background: transparent
+	color: $main
+	cursor: pointer
+
+small
+	font-family: 'Zilla Slab LightItalic', Helvetica, Arial
+	font-size: 1rem
+
+@media(max-width: 550px)
+	body
+		font-size: 1rem
+
+	h1
+		font-size: 25vw
+		-webkit-text-stroke: .15rem $main
+		text-stroke: .15rem $main
+		letter-spacing: .1rem
+
+	h2
+		hyphens: none
+
+// Navigation
+nav
+	position: absolute
+	right: 2rem
+	top: .7rem
+	z-index: 100
+
+	li
+		list-style: none
+		text-align: right
+		line-height: 2
+		margin-top: .7rem
+
+	button
+		color: $main
+		font-family: 'Righteous', 'Helvetica', Arial, sans-serif
+		text-transform: uppercase
+		position: relative
+		font-size: 1.5rem
+		transition: all .3s ease-in-out
+		outline: none
+		background-color: transparent
+		border: none
+		padding: 0
+		cursor: pointer
+
+	button:after
+		content: ''
+		width: 100%
+		height: 4px
+		background-color: $main
+		position: absolute
+		bottom: 0
+		right: 0
+		transition: all .3s ease-in-out
+
+	button:hover:after
+		transform: rotate(-20deg)
+		bottom: .5rem
+
+nav.white
+	button
+		color: white
+
+	button:after
+		background-color: white
+
+@media (max-width: 768px) 
+	nav
+		right: 1rem
+		top: 0
+
+		li
+			line-height: 2.3
+			margin-top: 0
+
+		button
+			font-size: 1.3rem
+
+// Columns
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+	position: relative
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+
+.col
+	flex-basis: 0
+	flex-grow: 1
+	max-width: 100%
+
+
+.col-auto
+	flex: 0 0 auto
+	width: auto
+	max-width: 100%
+
+
+.col-1
+	flex: 0 0 8.333333%
+	max-width: 8.333333%
+
+
+.col-2
+	flex: 0 0 16.666667%
+	max-width: 16.666667%
+
+
+.col-3
+	flex: 0 0 25%
+	max-width: 25%
+
+
+.col-4
+	flex: 0 0 33.333333%
+	max-width: 33.333333%
+
+
+.col-5
+	flex: 0 0 41.666667%
+	max-width: 41.666667%
+
+
+.col-6
+	flex: 0 0 50%
+	max-width: 50%
+
+
+.col-7
+	flex: 0 0 58.333333%
+	max-width: 58.333333%
+
+
+.col-8
+	flex: 0 0 66.666667%
+	max-width: 66.666667%
+
+
+.col-9
+	flex: 0 0 75%
+	max-width: 75%
+
+
+.col-10
+	flex: 0 0 83.333333%
+	max-width: 83.333333%
+
+
+.col-11
+	flex: 0 0 91.666667%
+	max-width: 91.666667%
+
+
+.col-12
+	flex: 0 0 100%
+	max-width: 100%
+
+@media (max-width: 768px) 
+	.col
+		width: 100% !important
+		flex-direction: column
+	
+	.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+		width: 100% !important
+		max-width: 100% !important
+		flex: 0 0 100% !important
+
+
+// Content & Background
+.content-wide
+	//min-height: 100vh
+	max-width: 100%
+	position: relative
+	padding: 3rem 3rem 5rem
+	overflow: hidden
+
+.box
+	position: absolute
+	background-color: $second
+	z-index: -10
+
+	&.box-small
+		height: .2rem
+		width: 130vw
+		transform: translateX(-50%) rotate(-20deg)
+		top: 75vh
+		left: 50%
+
+	&.box-footer
+		transform: rotate(20deg)
+		bottom: 0
+		top: initial
+		height: .2rem
+		left: -5rem
+		right: initial
+		width: 80vw
+
+.box-big
+	height: 10vw
+	width: 120vw
+	transform: rotate(30deg)
+	top: calc(25vw/3)
+
+@media(max-width: 550px)
+	.content-wide
+		padding: 3rem 1rem 5rem
+
+	.box-big
+		height: 4rem
+
+// Start
+.hello
+	width: 45vw
+	display: block
+	margin-top: 4rem
+
+	img
+		width: 50vw
+		max-width: 20rem
+		margin-top: 4rem
+
+	p
+		margin-top: .5rem
+		margin-left: .3rem
+		max-width: 30rem
+		transform: translateY(2rem)
+		opacity: 0
+		animation: animateUp .5s ease-in-out .25s forwards
+
+	.turn-letter
+		animation: rotateLetter .4s cubic-bezier(0.62, 0.04, 0.18, 1.01) 1.2s forwards
+		transform: rotate(50deg)
+		transform-origin: 37% 53.5%
+		padding-right: 3px
+
+@keyframes rotateLetter
+	0%
+		transform: rotate(50deg)
+	100%
+		transform: rotate(0)
+
+@media(max-width: 550px)
+	.hello
+		width: 100%
+		margin-top: 4rem
+
+		img
+			width: 90%
+
+		p
+			margin-top: 0
+
+// Projects
+.content
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	max-width: 990px
+
+.inner-content
+	display: flex
+	margin-left: auto
+	margin-right: auto
+	max-width: 1500px
+
+.projects
+	flex-wrap: wrap
+	margin-top: 3rem
+	margin-bottom: 6rem
+
+	.project
+		margin-top: 5rem
+		width: 50%
+		max-width: 30rem
+		position: relative
+		display: flex
+		align-items: center
+		transform: translateY(2rem)
+		opacity: 0
+		animation: animateUp .5s ease-in-out paused forwards
+
+		a 
+			position: relative
+			height: fit-content
+			transform: perspective(0px) rotateX(0deg) rotateY(0deg)
+			transition: all .5s ease-in-out
+			background-color: var(--bg-color)
+
+		a:hover
+			background-color: var(--bg-color-hover)
+
+		img
+			width: 100%
+			height: auto
+
+		h2
+			position: absolute
+			bottom: 3rem
+			visibility: hidden
+			opacity: 0
+			transition: visibility 0s, opacity 0.5s linear
+			transition-timing-function: ease-in-out
+
+		&.animate-start
+			animation-play-state: running
+
+		&.center
+			justify-content: center
+
+		&.center a:hover
+			transform: perspective(850px) rotateX(10deg)
+
+		&.start
+			justify-content: flex-start
+
+		&.start a:hover
+			transform: perspective(850px) rotateX(-10deg) rotateY(20deg)
+
+		&.end
+			justify-content: flex-end
+
+		&.end a:hover
+			transform: perspective(850px) rotateX(10deg) rotateY(-20deg)
+
+		&.medium a
+			width: 75%
+
+		&.small a
+			width: 50%
+
+	.w-100
+		width: 100%
+		max-width: none
+
+		a
+			width: auto
+
+			img
+				max-width: 25rem
+
+	.project a:hover h2
+		visibility: visible
+		opacity: 1
+
+	.project:first-child
+		margin-top: 0
+
+	.project:nth-child(odd)
+		h2
+			right: -2rem
+			text-align: right
+
+	.project:nth-child(even)
+		h2
+			left: -2rem
+			text-align: left
+
+@keyframes animateUp
+	0%
+		transform: translateY(2rem)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@media(max-width: 768px)
+	.projects
+		margin-top: 1.5rem
+
+		.project
+			width: 100%
+			margin-top: 1rem
+
+			img, a
+				width: 100% !important
+				max-width: none !important
+
+	.inner-content
+		flex-direction: row
+		flex-wrap: wrap
+
+@media(max-width: 550px)
+	.project h2
+		display: none
+
+@media(min-width: 1800px)
+	.projects
+		justify-content: space-around
+		
+	.project.w-100
+		justify-content: space-around
+
+// About
+.layover-box
+	background: $main
+	width: 0vw
+	height: 100vh
+	position: fixed
+	top: 5vh
+	left: 50%
+	transform: translateX(-50%)
+	margin-left: 2rem
+	z-index: 100
+	overflow: hidden
+	color: white
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	transition: width .7s cubic-bezier(0.6,-0.01, 0.27, 0.98)
+
+	.layover-content
+		width: 70vw
+		display: flex
+		align-items: stretch
+		transition: opacity .5s ease-in-out .3s
+		opacity: 0
+
+		.column
+			flex-grow: 1
+			flex-basis: 0
+			max-width: 100%
+
+		.column-central
+			display: flex
+			justify-content: center
+			align-items: center
+
+.close
+	cursor: pointer
+	transition: all .3s ease
+	font-family: 'Rubik Bold'
+	font-size: 7rem
+	line-height: 1
+
+.close:hover
+	transform: rotate(-20deg)
+
+.layover-box.open
+	width: 100vw
+
+	.layover-content
+		opacity: 1
+
+#contactform
+	input, textarea
+		width: 100%
+		box-sizing: border-box
+		border: white 2px solid
+		padding: .5rem 1rem
+		margin-bottom: 1rem
+		font-family: 'Zilla Slab Regular', Helvetica, Arial
+		font-size: 1.2rem
+		color: white
+		background-color: rgba(255,255,255,0)
+		box-shadow: none
+		outline: 0
+		resize: none
+
+	::placeholder
+		color: white
+
+	button
+		background-color: white
+		border: white 2px solid
+		color: $main
+		font-family: 'Zilla Slab Regular', Helvetica, Arial
+		padding: .5rem 1rem
+		font-size: 1.2rem
+		cursor: pointer
+		text-align: center
+		width: 40%
+		text-align: center
+		transition: all .3s ease-in-out
+		position: relative
+		height: 2.5rem
+
+	button:after
+		content: 'Send'
+		position: absolute
+		width: 100%
+		text-align: center
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		color: $main
+
+	button:hover
+		background-color: transparent
+		color: white
+
+	button:hover:after
+		content: 'Go for it!'
+		color: white
+
+html.layover
+	overflow: hidden
+
+@media(max-width: 768px)
+	.layover-box
+		top: 0
+		margin: 0
+
+		.layover-content
+			flex-direction: column-reverse
+			width: 90vw
+
+			.column
+				width: 100%
+
+			.column-last
+				font-size: 6rem
+
+	#contactform
+		text-align: center
+
+// Projektseite
+.back
+	position: absolute
+	top: 2rem
+	left: 1.5rem
+	z-index: 100
+	max-width: 2.2rem
+	color: white
+	font-family: 'Rubik Bold', Arial, Helvetica
+	transition: all .3s ease
+
+	img
+		max-width: 100%
+
+.header
+	width: 100vw
+	height: 100vh
+	background-position: center center
+	background-size: contain
+	background-repeat: no-repeat
+	background-color: var(--bg-color)
+	background-attachment: fixed
+
+.project-content
+	margin-top: 2rem
+	padding-bottom: 5rem
+
+.images
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	margin-top: 3rem
+
+	img
+		width: 50%
+		display: inline-block
+		margin-bottom: 1rem
+		flex: 1 0 calc(50% - 30px)
+
+	img:nth-child(3n+2)
+		padding-left: .5rem
+
+	img:nth-child(3n)
+		width: 100%
+
+.nav-prev-next
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-top: 5rem
+
+	.prev, .next
+
+		small
+			text-decoration: underline
+			text-transform: none
+
+		img
+			width: 1rem
+			height: auto
+
+	.prev
+		img
+			margin-right: .5rem
+
+	.next
+		img
+			transform: rotate(180deg)
+			margin-left: .5rem
+
+@media(max-width: 768px)
+	.images
+		img:nth-child(1n+1)
+			width: 100%
+			height: auto
+			padding: 0
+
+	.back
+		top: 1.5rem
+		left: 1rem
+
+// Footer
+footer
+	padding: 0 .5rem .3rem
+	font-style: italic
+	font-size: .8rem
+	text-align: right
+	display: flex
+	justify-content: space-between
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+
+	button
+		text-decoration: underline
+		font-style: italic
+		font-family: inherit
+		font-size: inherit
+
+@media(max-width: 550px)
+	footer
+		small
+			font-size: .8rem
